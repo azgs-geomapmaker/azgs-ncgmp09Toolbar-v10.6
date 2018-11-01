@@ -1,14 +1,12 @@
-AZGS NGCMP09 ArcMap Toolbar version 10.4
-June 15, 2018
+AZGS NGCMP09 ArcMap Toolbar version 10.6
+October 31, 2018 (Halloween)
 GH
 
-New Development Environment needed for 10.4
+New Development Environment needed for 10.6
 
-Visual Studio 2015 
-Visual Studion 2013 Isolate_shell - need the 64bit version !
-vd_isohellLP - Language Pack
-Microsoft .NET Framework 4.5.2
-ArcObjects SDK 10.4 - also VS project templates is a separate load
+Visual Studio 2017
+Microsoft .NET Framework 4.6.1
+ArcObjects SDK 10.6
 
 How to perform a Build into a new version
 
@@ -26,9 +24,11 @@ The ESRI version upgrade procedures do not work. Much cleaner to build a new pro
   Add image and cursor references in the the ESRI wizard, (its hard to fix after you build) to get the resources properly loaded.
 - Name all widgets the same as previous version, then cut and paste executable code into new code files. 
 - Do not modify new Assembly, designer, resource or config files, let system manage this. The Config.esriaddinx can be modified..
+  An exception to this rule is the dwmMapUnitLegend dockable window.
+- Adde AZGS_ to the ESRI objects in the Config.esriaddinx to meet naming conventions.
+- If you do have to make resource modifications, note that this version of Visual Studio has a bug.  Keep the Resources.Designer.cs file   open as you making changes, and they will get updated (not 100% reliable, may had to add and delete a coule times to get them to   
+  take).
 
-- If you do have to make resource modifications, note that this version of Visual Studio has a bug.  Keep the Resources.Designer.cs file open
-  as you making changes, and they will get updated (not 100% reliable, may had to add and delete a coule times to get them to take).
 
 Debug
 - After each change, must do a project build, unload add-in in ArcMap, reload, then in visual studio, attach to arcmap process.  This
@@ -52,10 +52,3 @@ Page Layout Fixes
   objects minimize this problem, but not entirely fixed.  
   This part of the code should be rewritten to not use
   the editor for these functions.  Maybe in the next version...
-
-
-
-
-
-
-
