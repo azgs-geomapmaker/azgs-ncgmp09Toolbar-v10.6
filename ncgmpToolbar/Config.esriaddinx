@@ -1,0 +1,77 @@
+﻿<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>ncgmpToolbar</Name>
+  <AddInID>{06857512-c2a3-498b-8763-36b7084a1b21}</AddInID>
+  <Description>Type in a description for this Add-in.</Description>
+  <Version>1.0</Version>
+  <Image>Images\ncgmpToolbar.png</Image>
+  <Author>ghudman</Author>
+  <Company></Company>
+  <Date>10/31/2018</Date>
+  <Targets>
+    <Target name="Desktop" version="10.6" />
+  </Targets>
+  <AddIn language="CLR" library="ncgmpToolbar.dll" namespace="ncgmpToolbar">
+    <ArcMap>
+      <Commands>
+        <Button id="AZGS_ncgmpToolbar_btnOpenNcgmpDatabase" class="btnOpenNcgmpDatabase" message="" caption="Open NCGMP Database" tip="Open FeatureClasses from a valid NCGMP Database." category="NCGMP Tools" image="Images\btnOpenNcgmpDatabase_1.png" onDemand="false">
+          <Help heading="Help">Open FeatureClasses from a valid NCGMP Database.</Help>
+        </Button>
+        <Button id="AZGS_ncgmpToolbar_btnDatabaseMaintenance" class="btnDatabaseMaintenance" message="" caption="Database Maintenance" tip="Run a variety of database maintenance routines." category="Ncgmp Tools" image="Images\btnDatabaseMaintenance_1.png">
+          <Help heading="Help">Run a variety of database maintenance routines.</Help>
+        </Button>
+        <Button id="AZGS_ncgmpToolbar_btnShowMapUnitLegendEditor" class="btnShowMapUnitLegendEditor" message="" caption="Manage Map Unit Legend" tip="Create and edit the Map Unit Legend for your working NCGMP Database. Data generated here is stored in a variety of NCGMP Tables." category="Ncgmp Tools" image="Images\btnShowMapUnitLegendEditor_1.png" onDemand="false">
+          <Help heading="Help">Create and edit the Map Unit Legend for your working NCGMP Database. Data generated here is stored in a variety of NCGMP Tables.</Help>
+        </Button>
+        <ComboBox id="AZGS_ncgmpToolbar_cmbDataSource" class="cmbDataSource" message="" caption="Manage Data Sources" tip="This combobox allows you to dynamically specify a data source. This data source, which is defined in the NCGMP DataSources table, will be automatically assigned to any new features you create." category="Ncgmp Tools" image="Images\cmbDataSource_1.png" sizeString="WWWWWWWWWWWWWWWWWWWW" rows="10" itemSizeString="WWWWWWWWWWWWWWWWWWWW">
+          <Help heading="Help">This combobox allows you to dynamically specify a data source. This data source, which is defined in the NCGMP DataSources table, will be automatically assigned to any new features you create.</Help>
+        </ComboBox>
+        <Button id="AZGS_ncgmpToolbar_btnAddEditDataSource" class="btnAddEditDataSource" message="" caption="Manage Data Sources" tip="Manage available Data Sources" category="Ncgmp tools" image="Images\btnAddEditDataSource_1.png" onDemand="false">
+          <Help heading="Help">Manage available Data Sources</Help>
+        </Button>
+        <Button id="AZGS_ncgmpToolbar_btnApplySelectedDefaults" class="btnApplySelectedDefaults" message="" caption="Apply Selected Values" tip="Apply Selected Values" category="Ncgmp Tools" image="Images\btnApplySelectedDefaults_1.png" onDemand="false">
+          <Help heading="Help">Apply Selected Values</Help>
+        </Button>
+        <Tool id="AZGS_ncgmpToolbar_tlDigitizeOrientationData" class="tlDigitizeOrientationData" message="" caption="Digitize Orientation Data" tip="Digitize orientation data from a scanned geologic map." category="Ncgmp Tool" image="Images\tlDigitizeOrientationData_1.png" cursor="Images\tlDigitizeOrientationData.cur">
+          <Help heading="Help">Digitize orientation data from a scanned geologic map.</Help>
+        </Tool>
+        <Tool id="AZGS_ncgmpToolbar_tlDrawStratCorDiagram" class="tlDrawStratCorDiagram" message="" caption="Generate Stratigraphic Correlation Diagram Boxes" tip="Generate Stratigraphic Correlation Diagram Boxes in the Layout view." category="Ncgmp Tools" image="Images\tlDrawStratCorDiagram_1.png" cursor="Images\tlDrawStratCorDiagram.cur">
+          <Help heading="Help">Generate Stratigraphic Correlation Diagram Boxes in the Layout view.</Help>
+        </Tool>
+        <Tool id="AZGS_ncgmpToolbar_tlDrawPolygonLegend" class="tlDrawPolygonLegend" message="" caption="Generate Stratigraphic Correlation Diagram Boxes" tip="Generate Stratigraphic Correlation Diagram Boxes in the Layout View" category="Ncgmp Tools" image="Images\tlDrawPolygonLegend_2.png" onDemand="false" cursor="Images\tlDrawPolygonLegend_1.cur">
+          <Help heading="Help">Generate Stratigraphic Correlation Diagram Boxes in the Layout View</Help>
+        </Tool>
+      </Commands>
+      <Menus>
+        <Menu id="AZGS_ncgmpToolbar_NCGMP_Menu" caption="NCGMP Menu" isRootMenu="false">
+          <Items>
+            <Button refID="AZGS_ncgmpToolbar_btnOpenNcgmpDatabase" />
+            <Button refID="AZGS_ncgmpToolbar_btnDatabaseMaintenance" separator="true" />
+            <Button refID="AZGS_ncgmpToolbar_btnShowMapUnitLegendEditor" separator="true" />
+          </Items>
+        </Menu>
+      </Menus>
+      <Toolbars>
+        <Toolbar id="AZGS_ncgmpToolbar_NCGMP_Toolbar" caption="NCGMP Toolbar" showInitially="false">
+          <Items>
+            <Menu refID="AZGS_ncgmpToolbar_NCGMP_Menu" />
+            <ComboBox refID="AZGS_ncgmpToolbar_cmbDataSource" />
+            <Button refID="AZGS_ncgmpToolbar_btnAddEditDataSource" />
+            <Tool refID="AZGS_ncgmpToolbar_tlDigitizeOrientationData" separator="true" />
+            <Tool refID="AZGS_ncgmpToolbar_tlDrawPolygonLegend" separator="true" />
+            <Tool refID="AZGS_ncgmpToolbar_tlDrawStratCorDiagram" />
+          </Items>
+        </Toolbar>
+      </Toolbars>
+      <DockableWindows>
+        <DockableWindow id="ncgmpToolbar_dwnMapUnitLegendEditor" class="dwnMapUnitLegendEditor+AddinImpl" caption="Map Unit Legend Editor" image="Images\dwnMapUnitLegendEditor_1.png">
+          <InitialPlacement height="500" width="300" state="pinned" position="right" />
+        </DockableWindow>
+      </DockableWindows>
+      <Editor>
+        <Extensions>
+          <Extension id="AZGS_ncgmpToolbar_ncgmpEditorExtension" class="ncgmpEditorExtension" />
+        </Extensions>
+      </Editor>
+    </ArcMap>
+  </AddIn>
+</ESRI.Configuration>
