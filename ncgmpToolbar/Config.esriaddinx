@@ -25,7 +25,7 @@
         <ComboBox id="AZGS_ncgmpToolbar_cmbDataSource" class="cmbDataSource" message="" caption="Manage Data Sources" tip="This combobox allows you to dynamically specify a data source. This data source, which is defined in the NCGMP DataSources table, will be automatically assigned to any new features you create." category="Ncgmp Tools" image="Images\cmbDataSource_1.png" sizeString="WWWWWWWWWWWWWWWWWWWW" rows="10" itemSizeString="WWWWWWWWWWWWWWWWWWWW">
           <Help heading="Help">This combobox allows you to dynamically specify a data source. This data source, which is defined in the NCGMP DataSources table, will be automatically assigned to any new features you create.</Help>
         </ComboBox>
-        <Button id="AZGS_ncgmpToolbar_btnAddEditDataSource" class="btnAddEditDataSource" message="" caption="Manage Data Sources" tip="Manage available Data Sources" category="Ncgmp tools" image="Images\btnAddEditDataSource_1.png" onDemand="false">
+        <Button id="AZGS_ncgmpToolbar_btnAddEditDataSource" class="btnAddEditDataSource" message="Source" caption="Manage Data Sources" tip="Manage available Data Sources" category="Ncgmp tools" image="Images\btnAddEditDataSource_1.png" onDemand="false">
           <Help heading="Help">Manage available Data Sources</Help>
         </Button>
         <Button id="AZGS_ncgmpToolbar_btnApplySelectedDefaults" class="btnApplySelectedDefaults" message="" caption="Apply Selected Values" tip="Apply Selected Values" category="Ncgmp Tools" image="Images\btnApplySelectedDefaults_1.png" onDemand="false">
