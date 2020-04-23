@@ -18,7 +18,8 @@ polygons on the map depict a particular unit. The information entered into this 
 extension automatically manages various primary key fields defined in the NCGMP09 schema. 
 As users create new features these fields are automatically populated. Similarly, users can select an "Active Data Source" record, and that Data Source will be automatically attached to each new feature.
 
-**Digitizing structural measurements from scanned geologic maps**: After scanning and georeferencing an existing geologic map, the user can use a tool to digitize measurements from the map. The user clicks three times for each feature to be digitized. First, the user clicks the location of the measurement. Next, the user clicks the two endpoints of the strike line for that measurement. The tool then prompts the user to enter the dip value from the measurement.
+***Deprecated***
+> *Digitizing structural measurements from scanned geologic maps*: After scanning and georeferencing an existing geologic map, the user can use a tool to digitize measurements from the map. The user clicks three times for each feature to be digitized. First, the user clicks the location of the measurement. Next, the user clicks the two endpoints of the strike line for that measurement. The tool then prompts the user to enter the dip value from the measurement.
 
 **Please also see the AZGS offical [Publication](http://repository.azgs.az.gov/uri_gin/azgs/dlio/1564) about this toolbar for more details about its use.**
 
